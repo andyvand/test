@@ -477,7 +477,7 @@ void audio_set_clk(unsigned freq, unsigned fs_config)
 {
     int i;
     int xtal = 0;
-    int clk;
+    struct clk *clk;    
     
     int (*audio_clock_config)[2];
 
