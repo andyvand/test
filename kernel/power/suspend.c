@@ -31,6 +31,10 @@
 
 #include "power.h"
 
+#ifdef CONFIG_SUSPEND_WATCHDOG
+	extern void disable_watchdog(void);
+#endif
+
 const char *const pm_states[PM_SUSPEND_MAX] = {
 #ifdef CONFIG_EARLYSUSPEND
 	[PM_SUSPEND_ON]		= "on",
